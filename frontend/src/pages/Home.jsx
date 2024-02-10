@@ -4,7 +4,8 @@ import heroImg01 from "../assets/images/hero-img01.png";
 import heroImg02 from "../assets/images/hero-img02.png";
 import heroImg03 from "../assets/images/hero-img03.png";
 import icon01 from "../assets/images/icon01.png";
-
+import { Link } from 'react-router-dom';
+import { BsArrowRight, } from'react-icons/bs'
 
 const Home = () => {
   return (
@@ -87,7 +88,7 @@ const Home = () => {
         <h2 className="heading text-center">
           Providing the best medical services
         </h2>
-        <p className='text__para text-center'>World class care for everyone. Our health System offers unmatched, expert heath care.</p>
+        <p className='text__para text-center'>World class care for everyone. Our health system offers unmatched, expert heath care.</p>
       </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
@@ -101,8 +102,12 @@ const Home = () => {
             Find the doctor
           </h2>
         <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-          dsbcvdbsbvd
+          World class care for everyone. Our health system offers unmatched, expert health care. From the lab to the clinics
         </p>
+
+        <Link to='/doctors' className= "w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+          <BsArrowRight className="group-hover:text-white w-6 h-5" />
+        </Link>
 
       
         </div>
