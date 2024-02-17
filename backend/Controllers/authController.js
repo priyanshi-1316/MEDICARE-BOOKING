@@ -2,6 +2,8 @@ import User from "../models/UserSchema.js";
 import Doctor from "../models/DoctorSchema.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+
+
 export const register= async (req,res)=>{
   
     //implementing sign up logic for a user
@@ -12,10 +14,10 @@ export const register= async (req,res)=>{
     let user=null;
 
     if(role==='patient'){
-        user=  User.findOne({email})
+        user= await User.findOne({email})
     }
     else if(role==='doctor'){
-        user=  Doctor.findOne({email})
+        user= await Doctor.findOne({email})
     }
     //check if user already exist
 
