@@ -23,8 +23,8 @@ mongoose.set('strictQuery',false)
 const connectDB=async()=>{
     try{
         await mongoose.connect(process.env.MONGO_URL,{
-            //useNewUrlParser: true,
-            //useUnifiedTopology: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
         })
         console.log('MONGODB database is connected');
     }
@@ -36,7 +36,7 @@ const connectDB=async()=>{
 
 //middleware
 app.use(express.json());
-app.use(cookieParser);
+app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use('/api/v1/auth', authRoute);//it is telling the app to use api for using any imcoming request that is comming
 
