@@ -3,6 +3,7 @@ import React from 'react';
 import heroImg01 from "../assets/images/hero-img01.png";
 import heroImg02 from "../assets/images/hero-img02.png";
 import heroImg03 from "../assets/images/hero-img03.png";
+import faqImg from "../assets/images/faq-img.png";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
@@ -12,7 +13,11 @@ import { BsArrowRight, } from'react-icons/bs';
 import About from '../components/About/About';
 import ServiceList from '../components/Services/ServiceList';
 import videoIcon from "../assets/images/video-icon.png";
-import avatarIcon from "../assets/images/avatar-icon.png"
+import avatarIcon from "../assets/images/avatar-icon.png";
+import DoctorList from '../components/Doctors/DoctorList';
+import FaqList from '../components/Faq/FaqList';
+
+
 
 const Home = () => {
   return (
@@ -174,7 +179,7 @@ const Home = () => {
    <section>
     <div className="container">
       <div className="xl:w-[470px] mx-auto">
-        <h2 className='heading text-center'>Our medical services</h2>
+        <h2 className='text-[32px] leading-9 text-headingColor font-[700] text-center'>Our medical services</h2>
         <p className='text__para text-center'>World-class care for everyone. Our health System offers unmatched, expert health care.</p>
       </div>
 
@@ -189,10 +194,10 @@ const Home = () => {
       <div className='flex items-center justify-between flex-col lg:flex-row'>
         {/*====feature content====*/}
         <div className='xl:w-[670px]'>
-          <h2 className='heading'>
+          <h2 className='text-[32px] leading-9 text-headingColor font-[700] '>
             Get virtual treatment <br /> anytime.
           </h2>
-
+          <br />
           <ul className='pl-4'>
             <li className='taxt__para'>
               1.Schedule the appointment directly. 
@@ -235,6 +240,47 @@ const Home = () => {
       </div>
     </section>
     {/*====feature section end===*/}
+    {/*=======our great doctors=====*/}
+    <section>
+      <div className="container">
+      <div className="xl:w-[470px] mx-auto">
+        <h2 className='text-[32px] leading-9 text-headingColor font-[700] text-center'>Our Great Doctors</h2>
+        <p className='text__para text-center'>World-class care for everyone. Our health System offers unmatched, expert health care.</p>
+      </div>
+      <DoctorList />
+      </div>
+    </section>
+    {/*=======our great doctors=====*/}
+
+    {/*===== faq section ===*/}
+    <section>
+      <div className='container'>
+        <div className='flex justify-between gap-[50px] lg:gap-0'>
+          <div className='w-1/2 hidden md:block'>
+            <img src={faqImg} alt=''/>
+          </div>
+          <div className='w-full md:w-1/2'>
+          <h2 className='text-[32px] leading-9 text-headingColor font-[700]'>
+            Most questions by our beloved patients
+          </h2>
+
+          <FaqList />
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {/*===== faq section end===*/}
+
+    {/*=====testimonial======*/}
+    <section>
+      <div className="container">
+        
+      </div>
+    </section>
+
+    {/*=====tetimonial end======*/}
+
 
    </>
       

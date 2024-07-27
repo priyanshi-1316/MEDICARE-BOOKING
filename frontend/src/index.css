@@ -20,7 +20,7 @@
     }
 
     .heading{
-        @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px];
+        @apply text-[18px] leading-[30px] font-[400] text-headingColor mt-[18px];
     }
 
     .header{
